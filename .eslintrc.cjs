@@ -16,17 +16,22 @@ module.exports = {
                 ".eslintrc.{js,cjs}"
             ],
             "parserOptions": {
-                "sourceType": "script"
+                "parser": '@typescript-eslint/parser',
+                "sourceType": "script",
+                "project": "./tsconfig.json"
             }
         }
     ],
     "parserOptions": {
         "ecmaVersion": "latest",
-        "sourceType": "module"
+        "sourceType": "module",
+        "project": "./tsconfig.json"
     },
     "plugins": [
         "vue"
     ],
+    "parser": '@typescript-eslint/parser',
+
     "rules": {
     }
 }
