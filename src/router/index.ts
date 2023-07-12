@@ -7,7 +7,9 @@ const routes: RouteRecordRaw[] = [{
 }, {
   name: 'main',
   path: '/main',
-  redirect: '/main/dashboard/workplace'
+  // redirect: '/main/dashboard/workplace',
+  component: async () => await import('../views/dynamicrouter/index.vue')
+
 }]
 const router = createRouter({
   routes,

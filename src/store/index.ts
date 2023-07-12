@@ -1,6 +1,4 @@
-import type { User } from '../types/user.types'
-
-export interface PUser {
-  userList: User[]
-  currentId: number
-}
+import { createPinia } from 'pinia'
+import { useUserStore } from './modules/user'
+export default createPinia()
+export { useUserStore }

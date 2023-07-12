@@ -1,7 +1,11 @@
 import { createApp } from 'vue'
-import './style.css'
+// import './style.css'
 // 引入vue-router
 import router from './router/index'
+import { useUserStore } from './store/index'
 import App from './App.vue'
-
-createApp(App).use(router).mount('#app')
+// 引入pinia
+import store from './store/index'
+const app = createApp(App).use(store)
+void useUserStore().getData()
+app.use(router).mount('#app')
