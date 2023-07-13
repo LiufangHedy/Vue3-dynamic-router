@@ -1,4 +1,5 @@
 <template>
+  hello
   <el-menu
     :default-active="activeIndex"
     class="el-menu-demo"
@@ -27,7 +28,10 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useUserStore } from '../store/index'
+console.log('useUserStore: ', useUserStore())
+
 const menuList = computed(() => useUserStore().menuList)
+console.log('menuListttt: ', menuList)
 const activeIndex = computed(() => useRoute().path)
 </script>
 

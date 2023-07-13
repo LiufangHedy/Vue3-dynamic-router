@@ -19,4 +19,8 @@ export interface Permission extends Info {
   type: number
   pid?: number
   path: string
+  children?: Permission[]
+}
+export interface UserDetail extends Permission, User {
+  permissionList: Permission[]
 }

@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import type { RouteRecordRaw } from 'vue-router'
+import mainPage from '../views/dynamicrouter/index.vue'
 // 配置路由信息
 const routes: RouteRecordRaw[] = [{
   path: '/',
@@ -7,8 +8,9 @@ const routes: RouteRecordRaw[] = [{
 }, {
   name: 'main',
   path: '/main',
+  component: mainPage,
   // redirect: '/main/dashboard/workplace',
-  component: async () => await import('../views/dynamicrouter/index.vue')
+  children: []
 
 }]
 const router = createRouter({

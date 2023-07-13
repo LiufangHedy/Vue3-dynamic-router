@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const { getUserList } = require('./router/getRouterInfo')
+const router = require('./router/index.js')
 app.use((req, res, next) => {
     //判断路径
       if(req.path !== '/' && !req.path.includes('.')){
@@ -14,7 +14,7 @@ app.use((req, res, next) => {
       }
       req.method === 'OPTIONS' ? res.status(204).end() : next()
     })
-app.use(getUserList)
+app.use(router)
 app.listen(3003, () => {
     console.log('Server is running on port 3003');
 })

@@ -9,5 +9,5 @@
   </el-container>
 </template>
 <script lang="ts" setup>
-import RouterNavigator from '/@/components/DynamicRouterNavigator.vue'
+import RouterNavigator from '../../components/DynamicRouterNavigator.vue'
 </script>
